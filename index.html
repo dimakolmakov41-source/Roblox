@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#111318">
+  <title>BlockWorld — Играй и создавай</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="BlockWorld"><span class="brand-mark">B</span><span>BLOCK<span class="brand-light">WORLD</span></span></a>
+    <label class="search"><span>⌕</span><input id="search" type="search" placeholder="Найти игру..." autocomplete="off"></label>
+    <div class="top-actions"><span class="coin">◆ <b id="coins">250</b></span><button class="avatar-button" id="profileBtn" aria-label="Профиль">D</button></div>
+  </header>
+  <div class="layout">
+    <aside class="sidebar">
+      <nav>
+        <button class="nav-item active" data-page="home">⌂ <span>Главная</span></button>
+        <button class="nav-item" data-page="discover">▦ <span>Открыть</span></button>
+        <button class="nav-item" data-page="avatar">♙ <span>Аватар</span></button>
+        <button class="nav-item" data-page="friends">♧ <span>Друзья</span></button>
+        <button class="nav-item" data-page="inventory">▣ <span>Инвентарь</span></button>
+        <button class="nav-item" data-page="shop">◇ <span>Магазин</span></button>
+        <button class="nav-item" data-page="settings">⚙ <span>Настройки</span></button>
+      </nav>
+      <div class="sidebar-bottom"><span class="online-dot"></span> Локальный режим</div>
+    </aside>
+    <main class="content">
+      <section class="hero">
+        <div><p class="eyebrow">ТВОЙ МИР — ТВОИ ПРАВИЛА</p><h1>Во что сыграем<br>сегодня?</h1><p class="hero-copy">Исследуй миры, проходи испытания и собирай награды.</p><button class="primary" id="randomBtn">Случайная игра <span>→</span></button></div>
+        <div class="hero-art" aria-hidden="true"><div class="cube cube-one"></div><div class="cube cube-two"></div><div class="cube cube-three"></div><div class="hero-orbit"></div></div>
+      </section>
+      <div class="section-heading"><div><p class="eyebrow">ВЫБИРАЙ СВОЁ ПРИКЛЮЧЕНИЕ</p><h2 id="sectionTitle">Популярные игры</h2></div><span class="game-count" id="gameCount">7 игр</span></div>
+      <div class="game-grid" id="gameGrid">
+        <button class="game-card" data-game="obby"><div class="game-art art-obby"><span>🏁</span><i>OBBY</i></div><div class="game-info"><b>Mega Obby</b><small>Паркур • Испытание</small></div></button>
+        <button class="game-card" data-game="clicker"><div class="game-art art-clicker"><span>⚡</span><i>CLICK!</i></div><div class="game-info"><b>Космический кликер</b><small>Кликер • Казуальная</small></div></button>
+        <button class="game-card" data-game="island"><div class="game-art art-island"><span>🏝️</span><i>SURVIVE</i></div><div class="game-info"><b>Остров выживания</b><small>Выживание • Приключение</small></div></button>
+        <button class="game-card" data-game="racing"><div class="game-art art-racing"><span>🏎️</span><i>RACE</i></div><div class="game-info"><b>Block Racing</b><small>Гонки • Аркада</small></div></button>
+        <button class="game-card" data-game="pets"><div class="game-art art-pets"><span>🐾</span><i>PETS</i></div><div class="game-info"><b>Мир питомцев</b><small>Коллекция • Симулятор</small></div></button>
+        <button class="game-card" data-game="city"><div class="game-art art-city"><span>🏙️</span><i>MY CITY</i></div><div class="game-info"><b>Мой город</b><small>Строительство • Песочница</small></div></button>
+        <button class="game-card" data-game="style"><div class="game-art art-style"><span>👕</span><i>STYLE</i></div><div class="game-info"><b>Студия стиля</b><small>Творчество • Аватары</small></div></button>
+      </div>
+      <section class="quick-panel"><div><b>✨ Каждый день — новое приключение</b><p>Выбирай игру и открывай новые возможности.</p></div><span class="panel-spark">✦</span></section>
+    </main>
+  </div>
+  <div class="modal-backdrop hidden" id="modalBackdrop"><section class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><button class="modal-close" id="closeModal" aria-label="Закрыть">×</button><div class="modal-icon" id="modalIcon">🎮</div><p class="eyebrow">BLOCKWORLD EXPERIENCE</p><h2 id="modalTitle">Игра</h2><p id="modalDescription"></p><div id="gameArea" class="game-area"></div><button class="primary modal-play" id="startGame">Играть <span>→</span></button></section></div>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
